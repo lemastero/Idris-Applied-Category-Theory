@@ -1,0 +1,12 @@
+package act
+
+sourcedir = src
+
+modules = Act.Equivalence
+        , Act.Magma
+        , Act.ActSemigroup
+        , Act.ActMonoid
+        , Act.SymmetricMonoid
+        , Act.Preorder
+        , Act.MonoidalPreorder
+        , Act.ActSymmetricMonoidalPreorder
