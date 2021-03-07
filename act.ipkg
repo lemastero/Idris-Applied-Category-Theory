@@ -2,11 +2,14 @@ package act
 
 sourcedir = src
 
-modules = Act.Equivalence
+modules =
+        Logic.ActBool
+        , Logic.B3
+        , Act.Equivalence
         , Act.Magma
         , Act.ActSemigroup
         , Act.ActMonoid
         , Act.SymmetricMonoid
         , Act.Preorder
         , Act.MonoidalPreorder
-        , Act.ActSymmetricMonoidalPreorder
+        , Act.SymmetricMonoidalPreorder
