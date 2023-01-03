@@ -20,7 +20,9 @@ jobs:
           nix_path: nixpkgs=channel:nixos-unstable
         
       - name: install idris
-        run: nix-env -f "<nixpkgs>" -iA idris
+        run: |
+          export NIXPKGS_ALLOW_BROKEN=1
+          nix-env --impure -f "<nixpkgs>" -iA idris
 
       - name: Build project using Idris
         run: idris --build act.ipkg
