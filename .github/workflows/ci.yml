@@ -15,8 +15,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Setup Idris
-        uses: sergeyshpadyrev/setup-idris@v1.2
+      - uses: cachix/install-nix-action@v17
+        with:
+          nix_path: nixpkgs=channel:nixos-unstable
+        
+      - name: install idris
+        run: nix-env -f "<nixpkgs>" -iA idris
 
       - name: Build project using Idris
         run: idris --build act.ipkg
