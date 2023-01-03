@@ -15,8 +15,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Install Idris using nix
-        run: nix-env -f "<nixpkgs>" -iA idris
+      - name: Setup Idris
+        uses: sergeyshpadyrev/setup-idris@v1.2
 
       - name: Build project using Idris
         run: idris --build act.ipkg
